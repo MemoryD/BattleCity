@@ -6,9 +6,9 @@ Move playTwo[5] = {{0, -TANK_SPEED, SDLK_UP}, {TANK_SPEED, 0, SDLK_RIGHT}, {0, T
 //构造函数 
 Tank::Tank( SDL_Surface *source, Move *m )
 {
-	born = load_image( "graphics\\bore.bmp", BLACK_KEY);
-	shield = load_image( "graphics\\shield.bmp",BLACK_KEY);
-	bang = Mix_LoadWAV( "sound\\bang.wav" );
+	born = load_image( "..\\graphics\\bore.bmp", BLACK_KEY);
+	shield = load_image( "..\\graphics\\shield.bmp",BLACK_KEY);
+	bang = Mix_LoadWAV( "..\\sound\\bang.wav" );
 	
 	me = source;
 	moveTo = m;
@@ -236,7 +236,7 @@ void Tank::die()
 //构造函数 
 MainTank::MainTank( SDL_Surface *source, Move *m ):Tank( source, m )
 {
-	fire = Mix_LoadWAV( "sound\\fire.wav" );
+	fire = Mix_LoadWAV( "..\\sound\\fire.wav" );
 	
 	shieldTime = INIT_SHIELD_TIME;													// 初始保护罩时间 
 	star = 0;																		// 初始星级为 0 

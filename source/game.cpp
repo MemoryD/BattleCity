@@ -14,8 +14,8 @@ MyGame::MyGame()
 	}
 	
 	level = 0;																	// 初始关卡
-	life_1 = 99;																// player1 的生命 
-	life_2 = 99;																// player2 的生命 
+	life_1 = 10;																// player1 的生命 
+	life_2 = 10;																// player2 的生命 
 	end = false;																// 未结束 
 	tankNum = TANK_TWO_NUM;														// 默认为双人模式，后期选择再修改 
 	
@@ -28,35 +28,35 @@ MyGame::MyGame()
 //各种文件的载入 
 void MyGame::load_files()
 {
-	p1 = load_image( "graphics\\player1.bmp" );
-	p2 = load_image( "graphics\\player2.bmp" );
-	enemy = load_image( "graphics\\enemy.bmp", BLACK_KEY );
-	misc = load_image( "graphics\\misc.bmp", WHITE_KEY );
-	bg = load_image( "graphics\\bg.png" );
-	num = load_image( "graphics\\num.bmp", WHITE_KEY);
-	flag = load_image( "graphics\\flag.bmp", WHITE_KEY);
-	home = load_image( "graphics\\tile.bmp" );
-	over = load_image( "graphics\\gg.png" );
-	pase = load_image( "graphics\\Pause.png" );
-	splash = load_image( "graphics\\splash.bmp" );
-	explain = load_image( "graphics\\shuoming.png" );
-	declare = load_image( "graphics\\declare.png" ); 
-	st = load_image( "graphics\\Stage.png", WHITE_KEY);
-	choose = load_image( "graphics\\player1.bmp" );
-	brand = load_image( "graphics\\brand.png" );
-	gg = load_image( "graphics\\gameover.bmp" );
-	bomb1 = load_image( "graphics\\explode1.bmp");
-	bomb2 = load_image( "graphics\\explode2.bmp");
-	bom =  Mix_LoadWAV( "sound\\bang.wav" );
-	music = Mix_LoadMUS( "sound\\start.wav" );
-	peow = Mix_LoadWAV( "sound\\Peow.wav" );
+	p1 = load_image( "..\\graphics\\player1.bmp" );
+	p2 = load_image( "..\\graphics\\player2.bmp" );
+	enemy = load_image( "..\\graphics\\enemy.bmp", BLACK_KEY );
+	misc = load_image( "..\\graphics\\misc.bmp", WHITE_KEY );
+	bg = load_image( "..\\graphics\\bg.png" );
+	num = load_image( "..\\graphics\\num.bmp", WHITE_KEY);
+	flag = load_image( "..\\graphics\\flag.bmp", WHITE_KEY);
+	home = load_image( "..\\graphics\\tile.bmp" );
+	over = load_image( "..\\graphics\\gg.png" );
+	pase = load_image( "..\\graphics\\Pause.png" );
+	splash = load_image( "..\\graphics\\splash.bmp" );
+	explain = load_image( "..\\graphics\\shuoming.png" );
+	declare = load_image( "..\\graphics\\declare.png" ); 
+	st = load_image( "..\\graphics\\Stage.png", WHITE_KEY);
+	choose = load_image( "..\\graphics\\player1.bmp" );
+	brand = load_image( "..\\graphics\\brand.png" );
+	gg = load_image( "..\\graphics\\gameover.bmp" );
+	bomb1 = load_image( "..\\graphics\\explode1.bmp");
+	bomb2 = load_image( "..\\graphics\\explode2.bmp");
+	bom =  Mix_LoadWAV( "..\\sound\\bang.wav" );
+	music = Mix_LoadMUS( "..\\sound\\start.wav" );
+	peow = Mix_LoadWAV( "..\\sound\\Peow.wav" );
 				
 	int x = 0;
 	for(char i = '0'; i < TOTAL_STAGE / 10 + '0'; i++)							// 初始化地图文件名 
 	{
 		for(char j = '0'; j <= '9'; j++)
 		{
-			stage[x] += "map\\level";
+			stage[x] += "..\\map\\level";
 			stage[x] += i;
 			stage[x] += j;
 			stage[x] += ".map";

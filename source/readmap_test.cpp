@@ -101,8 +101,8 @@ int main(int argc, char *args[])
 	
 	std::set<int> s;
 	std::set<int>::iterator it;
-	map = load_image( "graphics\\misc.bmp");				//写要读取的图片 
-	freopen("graphics\\color.txt", "a", stdout);			//生成的地图文件 
+	map = load_image( "..\\graphics\\misc.bmp");				//写要读取的图片 
+	freopen("..\\graphics\\color.txt", "a", stdout);			//生成的地图文件 
 	
 	for(int i = 2; i < map->w; i++)
 	{	

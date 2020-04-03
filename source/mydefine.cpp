@@ -44,7 +44,9 @@ bool init_SDL()
     {
         return false;
     }
-
+	
+	SDL_WM_SetCaption( "BattleCity", NULL );
+    SDL_WM_SetIcon(SDL_LoadBMP("..\\graphics\\tank_ico.bmp"), NULL);
     screen = SDL_SetVideoMode( SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE );
 
     if( screen == NULL )
@@ -56,8 +58,6 @@ bool init_SDL()
     {
         return false;
     }
-    
-    SDL_WM_SetCaption( "BattleCity", NULL );
 
     return true;
 }

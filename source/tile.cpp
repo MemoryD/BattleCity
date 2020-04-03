@@ -4,7 +4,7 @@ Tile *tile[TILE_NUM][TILE_NUM];													// 障碍数组表示地图，是全局变量
 //构造函数 
 Tile::Tile( int x, int y, int t )
 {
-	tile = load_image( "graphics\\tile.bmp" ,BLACK_KEY);
+	tile = load_image( "..\\graphics\\tile.bmp" ,BLACK_KEY);
 	type = t;
 	box.x = x;
 	box.y = y;

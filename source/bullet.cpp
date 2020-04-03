@@ -5,10 +5,10 @@ Move bulletTo[4] = {{0, -BULLET_SPEED, UP}, {BULLET_SPEED, 0, RIGHT}, {0, BULLET
 //构造函数 
 Bullet::Bullet( const SDL_Rect &b, int d )
 {
-	myself = load_image( "graphics\\bullet.bmp",BLACK_KEY );
-	explode1 = load_image( "graphics\\explode1.bmp" );
-	explode2 = load_image( "graphics\\explode2.bmp" ,BLACK_KEY);
-	hit = Mix_LoadWAV( "sound\\hit.wav" );
+	myself = load_image( "..\\graphics\\bullet.bmp",BLACK_KEY );
+	explode1 = load_image( "..\\graphics\\explode1.bmp" );
+	explode2 = load_image( "..\\graphics\\explode2.bmp" ,BLACK_KEY);
+	hit = Mix_LoadWAV( "..\\sound\\hit.wav" );
 	
 	speed = 2;																	// 默认速度为 2 
 	isShot = true;																// 刚构造时默认不显示 

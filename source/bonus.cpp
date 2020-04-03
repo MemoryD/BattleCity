@@ -3,7 +3,7 @@
 //构造 
 Bonus::Bonus()
 {
-	me = load_image( "graphics\\bonus.bmp" );
+	me = load_image( "..\\graphics\\bonus.bmp" );
 	isShow = false;																// 初次构造不显示 
 	
 	born();

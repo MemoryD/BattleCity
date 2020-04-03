@@ -1,16 +1,16 @@
-# Project: BattleCity_V1.5
+# Project: BattleCity
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-RES      = BattleCity_V1.5_private.res
+RES      = BattleCity_private.res
 OBJ      = game.o mydefine.o bullet.o tile.o tank.o bonus.o run.o timer.o $(RES)
 LINKOBJ  = game.o mydefine.o bullet.o tile.o tank.o bonus.o run.o timer.o $(RES)
 LIBS     = -L"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -L"E:/SDL/lib" -static-libgcc -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_ttf -lSDL_mixer -mwindows -m32 -g3
 INCS     = -I"E:/Dev-Cpp/MinGW64/include" -I"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/SDL/include"
 CXXINCS  = -I"E:/Dev-Cpp/MinGW64/include" -I"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"E:/SDL/include"
-BIN      = BattleCity_V1.5.exe
+BIN      = ../bin/BattleCity.exe
 CXXFLAGS = $(CXXINCS) -m32 -g3
 CFLAGS   = $(INCS) -m32 -g3
 RM       = rm.exe -f
@@ -49,6 +49,6 @@ run.o: run.cpp
 timer.o: timer.cpp
 	$(CPP) -c timer.cpp -o timer.o $(CXXFLAGS)
 
-BattleCity_V1.5_private.res: BattleCity_V1.5_private.rc 
-	$(WINDRES) -i BattleCity_V1.5_private.rc -F pe-i386 --input-format=rc -o BattleCity_V1.5_private.res -O coff 
+BattleCity_private.res: BattleCity_private.rc 
+	$(WINDRES) -i BattleCity_private.rc -F pe-i386 --input-format=rc -o BattleCity_private.res -O coff 
 

@@ -1,7 +1,7 @@
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
 #include <string>
-#include<cstdio>
+#include <cstdio>
 #include <set>
 
 const int SCREEN_WIDTH = 640;
@@ -71,11 +71,11 @@ bool load_files()
 	{
 		for(char j = '0'; j <= '9'; j++)
 		{
-			stage[x] += "Stage\\stage";
+			stage[x] += "..\\Stage\\stage";
 			stage[x] += i;
 			stage[x] += j;
 			stage[x] += ".png";
-			level[x] += "map\\level";
+			level[x] += "..\\map\\level";
 			level[x] += i;
 			level[x] += j;
 			level[x] += ".map";
